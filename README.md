@@ -41,3 +41,5 @@ X = 8 points
 Y = 4 points
 Z = 10 points
 Blank tiles can be used as any letter and have no point value.
+
+##
