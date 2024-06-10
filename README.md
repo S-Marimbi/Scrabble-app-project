@@ -4,7 +4,7 @@ Programming Language: Python 3. x
 ## How to play
 Single-player mode: Ability to play against the PC on the terminal
 
-
+The board has 15 rows, and 15 columns, each numbered from 0 to 14. 
  Each player starts with 7 tiles.
 * The first player puts a word (not less than 2 letters) on the board. It must be on the center star and every word after that has to be connected to an already-played word. (left to right, up to down)
 * You get points for each word. The longer the word, the more points you get. You also get points for using all your tiles at once (“bingo”). A bingo is worth 50 points.
