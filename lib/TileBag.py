@@ -39,19 +39,19 @@ class Bag:
         return player_tiles
 
 # Create an instance of the Bag class
-bag_instance = Bag(tile_bag)
+# bag_instance = Bag(tile_bag)
 
 # Take tiles from the bag
-tile1 = bag_instance.take_from_bag()
-tile2 = bag_instance.take_from_bag()
+# tile1 = bag_instance.take_from_bag()
+# tile2 = bag_instance.take_from_bag()
 
 # Check the number of remaining tiles
-remaining_tiles = bag_instance.get_remaining_tiles()
+# remaining_tiles = bag_instance.get_remaining_tiles()
 
-print("Taken tiles:", tile1, tile2)
-print("Remaining tiles:", remaining_tiles)
+# print("Taken tiles:", tile1, tile2)
+# print("Remaining tiles:", remaining_tiles)
 
 # Distribute 7 tiles to a player's hand
-player_hand = bag_instance.distribute_tiles(7)
-print("Player's hand:", player_hand)
+# player_hand = bag_instance.distribute_tiles(7)
+# print("Player's hand:", player_hand)
 print("Remaining tiles in bag:", bag_instance.get_remaining_tiles())
