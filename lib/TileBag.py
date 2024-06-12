@@ -54,4 +54,4 @@ class Bag:
 # Distribute 7 tiles to a player's hand
 # player_hand = bag_instance.distribute_tiles(7)
 # print("Player's hand:", player_hand)
-print("Remaining tiles in bag:", bag_instance.get_remaining_tiles())
+# print("Remaining tiles in bag:", bag_instance.get_remaining_tiles())
