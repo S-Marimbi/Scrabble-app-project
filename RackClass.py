@@ -1,3 +1,5 @@
+from lib.TileBag import Bag
+
 class Rack:
     """
     Creates each player's hand. 

@@ -1,3 +1,4 @@
+from RackClass import Rack
 class Player:
     """
     Create an instance of a player. 
