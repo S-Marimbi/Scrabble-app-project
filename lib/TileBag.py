@@ -1,29 +1,30 @@
-# Defining the tile bag (score-worth of each letter-tile)
-bag = {
-    "A": 1, "B": 3, "C": 3, "D": 2, "E": 1, "F": 4, "G": 2, "H": 4, "I": 1, "J": 1,
-    "K": 5, "L": 1, "M": 3, "N": 1, "O": 1, "P": 3, "Q": 10, "R": 1, "S": 1, "T": 1,
-    "U": 1, "V": 4, "W": 4, "X": 8, "Y": 4, "Z": 10, "#": 0
+import random
+
+# Defining the tile bag with quantities
+tile_distribution = {
+    "A": 9, "B": 2, "C": 2, "D": 4, "E": 12, "F": 2, "G": 3, "H": 2, "I": 9, "J": 1,
+    "K": 1, "L": 4, "M": 2, "N": 6, "O": 8, "P": 2, "Q": 1, "R": 6, "S": 4, "T": 6,
+    "U": 4, "V": 2, "W": 2, "X": 1, "Y": 2, "Z": 1, "#": 2  
     # The "#" tile represents a blank tile holding zero points
 }
 
 # Container of all the letter tiles in the game
 class Bag:
-    def __init__(self, tile_bag):
-        # Sets up the bag according to the specified quantities.
-        self.tile_bag = tile_bag
-        self.bag = []
-        self.initialize_bag()
+    def __init__(self, tile_distribution):
+        self.tiles = self.initialize_tiles(tile_distribution)
 
-    def initialize_bag(self):
-        # Fills the bag according to the defined quantities.
-        for letter, quantity in self.tile_bag.items():
-            self.bag.extend([letter] * quantity)
+    def initialize_tiles(self, tile_distribution):
+        tiles = []
+        for letter, count in tile_distribution.items():
+            tiles.extend([letter] * count)
+        random.shuffle(tiles)
+        return tiles
 
-    def take_from_bag(self):
-        # Removes a tile from the bag and provides it to the user for restocking the hand
-        return self.bag.pop()
+    def draw_tile(self):
+        if self.tiles:
+            return self.tiles.pop()
+        else:
+            raise TypeError("Tile bag is empty")
 
     def get_remaining_tiles(self):
-        # Provides the number of tiles remaining in the bag.
-        return len(self.bag)
-
+        return len(self.tiles)
