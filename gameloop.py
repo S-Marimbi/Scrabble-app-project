@@ -1,6 +1,7 @@
 #intializing the game
 #initializing the board,tile bag, and players
 # Function to start the game
+from TileBag import Bag
 def start_game():
     board = initialize_board()
     tile_bag = initialize_tile_bag()
