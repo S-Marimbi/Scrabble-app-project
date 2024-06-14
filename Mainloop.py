@@ -65,7 +65,7 @@ def main():
         else:
             print("Computer could not find a valid word to play.")
 
-    # Game loop
+    # Checking game conditions
     while True:
         current_player = players[current_player_index]
         if current_player == human_player:
